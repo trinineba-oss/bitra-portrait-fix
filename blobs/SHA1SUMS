@@ -1,0 +1,5 @@
+1ab59342de1b31e8ed70335783a4f5f40653fb7d  odm/lib64/libarcsoft_dualcam_bokeh_api.so
+6b5d9bfe5251830fb54ac1f34b6e77339e32347e  odm/lib64/libarcsoft_dualcam_refocus_left.so
+e76f27e392463562ab447595dc5cdd587a61c000  odm/lib64/libarcsoft_dualcam_refocus_preview.so
+6c290a3a3875f14e776f8df6d37670dec61e4086  odm/lib64/libarcsoft_dualcam_refocus_uw.so
+2d7abab9c8d72d5410df2b6ab7a4d151c8151926  odm/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so

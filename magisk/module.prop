@@ -1,0 +1,6 @@
+id=bitra_portrait_fix
+name=Bitra Portrait Mode Fix
+version=v1.0
+versionCode=1
+author=trinineba
+description=Fixes OplusCamera portrait crash on realme GT Neo 2 (bitra) by using OnePlus 8 (SD865/870) ArcSoft dualcam libs instead of OnePlus 12 ones that need a missing HTP DSP driver.
