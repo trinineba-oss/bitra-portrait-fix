@@ -45,13 +45,14 @@ Full analysis: [SM8250-Common/android_device_realme_sm8250-common#2](https://git
 
 See **[BUILDER.md](BUILDER.md)**. It has the `proprietary-files.txt` block with pinned hashes, the required `extract-files.py` fixup, and the `Android.bp` note.
 
-## For users on an affected ROM (Magisk, experimental)
+## For users on an affected ROM (Magisk module)
 
 `magisk/` contains a module that bind-mounts these five files over the ROM's copies at boot, keeping the original SELinux labels. Grab the zip from [Releases](../../releases), or build it with `magisk/build.sh`.
 
 - It installs on bitra only.
 - Remove it in Magisk, then reboot, to undo it.
-- **Status:** not yet tested on a device. Reports welcome.
+- **Status:** tested on bitra (DerpFest 16.2, Magisk 31.0). The module installs, all five bind mounts come up with the original SELinux label (`same_process_hal_file`), the camera app maps the module's copies, and rear and front Portrait photos save without crashing. That ROM already shipped these libs, so a ROM that still has the OnePlus 12 libs hasn't been tested yet. Reports welcome.
+- **Known:** on bitra the cDSP refuses to load `libarcsoft_dualcam_refocus_skel.so` (`Streaming Hash Finalize error`). The depth engine still initialises (`ARCDCR_Init() finished! (0)`) and portrait works without the DSP. This is the same with or without the module, because the files are identical.
 - Don't add OplusCamera to the Magisk DenyList, because that would unmount the fix for the camera.
 
 ## Notice
